@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      { "targets": {
+          "node": "current",
+          "browsers": "since 2012"
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-object-rest-spread",
+    "transform-react-remove-prop-types",
+    "@babel/plugin-syntax-dynamic-import",
+    "babel-plugin-macros",
+    [
+      "@babel/plugin-proposal-decorators",
+      { "legacy": true }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ]
+  ],
+  "ignore": [
+    "src/server/public/javascripts/**"
+  ]
+}
